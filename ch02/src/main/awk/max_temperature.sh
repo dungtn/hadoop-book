@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-for year in all/*
+if [ "$1" == "" ]; then
+  echo "No input directory specified!"
+  exit
+fi
+for year in "$1"/ncdc/all/*
 do
   echo -ne `basename $year .gz`"\t"
   gunzip -c $year | \
