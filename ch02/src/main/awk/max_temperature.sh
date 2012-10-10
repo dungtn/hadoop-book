@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Calculate the max temperature for each year
+# Usage: $chmod +x max_temperature.sh | max_temperature.sh ${PWD}/input/
+
 if [ "$1" == "" ]; then
   echo "No input directory specified!"
   exit
